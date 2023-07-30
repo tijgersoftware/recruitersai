@@ -41,7 +41,7 @@ p,
 /* Styling for the chat bubble content */
 .bpw-chat-bubble-content {
   background-color: #4b4b4b;
-  border-radius: 3px;
+  border-radius: 10px;
   border: 1px transparent;
 }
 
@@ -56,8 +56,8 @@ p,
 .bpw-layout {
   width: 100% !important;
   height: 100%;
-  border-radius: 30px;
-  border: 1px;
+  padding: 1em 3em;
+  border-radius: 0;
 }
 /* Responsive design rules for devices with width less than or equal to 767px */
 @media screen and (max-device-width: 767px) {
@@ -66,7 +66,9 @@ p,
     height: 100%;
     right: 0;
     bottom: 0;
+    padding: 0;
     border-radius: 0;
+    margin: 0;
   }
 }
 
@@ -131,8 +133,11 @@ a {
 
 /* Styling for the composer section of the chat interface */
 .bpw-composer {
+  border-radius: 15px;
   background-color: #444654;
   border-top: 1px solid #4b4b4b;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Styling for the scrollbar in the chat container */
@@ -242,5 +247,16 @@ a {
 }
 
 #btn-close {
+  display: none;
+}
+
+#btn-download {
+  display: none;
+}
+#btn-conversations {
+  display: none;
+}
+
+.bpw-header-container {
   display: none;
 }

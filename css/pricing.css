@@ -1,0 +1,236 @@
+:root {
+  --clr-primary-200: #24222c;
+  --clr-neutral: #c9c9dc;
+  --clr-accent: #edeff8;
+  --clr-neutral-transparant: rgb(201, 201, 220, 0.1);
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.6em;
+}
+
+/* Set background color and font styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--clr-primary-200);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #24222c 0%,
+    #121117 1%,
+    transparent 100%
+  );
+
+  color: var(--clr-neutral);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 0.2em;
+  color: var(--clr-accent);
+  text-align: center;
+}
+
+h1 span {
+  font-size: 3.5rem;
+  margin-top: 0.2em;
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.title {
+  margin-top: 3em;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 5em;
+}
+
+.btn.btn-call-to-action {
+  display: inline-block;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  background-color: #ff5500;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: var(--clr-accent);
+  font-size: 18px;
+
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+
+  text-decoration: none;
+}
+
+.btn.btn-call-to-action:hover {
+  background-color: #ff7700; /* Change background color on hover */
+}
+
+.pricing-blocks {
+  display: flex;
+  width: 100%;
+}
+.pricing-block {
+  flex: 1;
+  border-radius: 10px;
+  margin: 3em 0;
+  padding: 2em;
+  text-align: center;
+  background-color: var(--clr-neutral-transparant);
+}
+
+.pricing-block:first-child {
+  margin-right: 20px;
+}
+
+.block-subtitle {
+  position: relative;
+  padding: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: var(--clr-neutral-transparant);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.block-subtitle span {
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.block-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 20px solid transparent;
+  border-left: 20px solid #2d2b37;
+}
+
+.block-subtitle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 20px solid transparent;
+  border-right: 20px solid #2d2b37;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.slider-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-transparant);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.value {
+  text-align: left;
+}
+
+.p1-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--clr-neutral);
+}
+
+.p1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--clr-neutral);
+}
+
+.p2 {
+  font-size: 0.6rem;
+  margin: 0;
+  color: var(--clr-neutral);
+}
+
+.separator {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+
+  color: var(--clr-neutral);
+  margin: 0 3px;
+}
+
+.pricing-box {
+  background-color: var(--clr-neutral-transparant);
+  padding: 4em 2em;
+  border-radius: 10px;
+  margin-bottom: 5em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-head {
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  color: var(--clr-accent);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section-head p {
+  color: var(--clr-neutral);
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+
+  .pricing-blocks {
+    flex-direction: column;
+  }
+
+  .pricing-block:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
