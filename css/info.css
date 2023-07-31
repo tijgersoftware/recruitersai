@@ -61,6 +61,35 @@ h1 span {
   padding: 0 5em;
 }
 
+h2 span {
+  margin-top: 0.2em;
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.image-container {
+  /* Make the container take the full width of its parent */
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Image styles */
+.image-container img {
+  max-width: 100%; /* Make the image take the full width of the container */
+  height: auto; /* Automatically adjust the image height to maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners for the image */
+  display: block; /* Remove any default inline spacing for the image */
+}
+
 .btn.btn-call-to-action {
   display: inline-block;
   width: 100%;
