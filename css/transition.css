@@ -1,0 +1,11 @@
+.content-container {
+  animation: fade-in 1s ease; /* Duration and easing function can be adjusted */
+  animation-fill-mode: forwards; /* Ensure the final state is maintained after the animation */
+  opacity: 0; /* Start with opacity 0 to make the content hidden */
+}
+
+/* Add a class to apply the ease-in effect to the visible content */
+.content-ease-in {
+  opacity: 1;
+  transition: opacity 1s ease; /* Modify the duration and easing function as desired */
+}

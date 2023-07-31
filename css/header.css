@@ -45,7 +45,6 @@ header nav {
   z-index: 1;
 }
 
-
 .topnav {
   overflow: hidden;
   z-index: 2;
@@ -55,16 +54,13 @@ header nav {
   display: none;
 }
 
-.invisible{
+.invisible {
   display: none;
 }
 
-.visible{
+.visible {
   display: block;
 }
-
-
-
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
@@ -112,8 +108,7 @@ header nav {
     flex-direction: column;
   }
 
-  .menu-default{
+  .menu-default {
     display: none;
   }
-
 }

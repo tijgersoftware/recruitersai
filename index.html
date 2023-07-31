@@ -8,9 +8,11 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/transition.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
 
-    <title>CasaQuest</title>
+    <title>Recruiters AI</title>
 </head>
 
 <body>
@@ -22,23 +24,18 @@
                 </video>
 
             </div>
-            <div id="topNavContainer"></div>
+            <div  class="content-container" id="topNavContainer"></div>
 
             <div class="container">
-                <h1 class="initial-hide">
-                   Automate Hiring
-                    <span>
-                         Feed AI.
-                    </span>
-                </h1>
+   
 
-                                <h1 >
+                                <h1 class="content-container">
                    Do You Want More <br/>
-                    <span>
+                    <span class="content-container">
                          Successful Placements?
                     </span>
                 </h1>
-                <h2 id="locationContainer">
+                <h2 class="content-container"id="locationContainer">
           
 
     <script>
@@ -51,7 +48,7 @@
       }
 
       // Fetch user's estimated location based on IP address using the ip-api.com API
-      const apiUrl = "https://ipapi.co/8.8.8.8/json/";
+      const apiUrl = "https://ipapi.co/json/";;
 
       fetch(apiUrl)
         .then((response) => response.json())
@@ -61,20 +58,16 @@
         });
     </script>
                 </h2>
-                <p  class="initial-hide">
-                    Recruiters AI Is Proven To Improve Client Satisfaction, Fuels Your Hiring Process with Custom AI-Driven Solutions.
-                </p>
-                <div class="pre-option initial-hide"><img src="./img/c.png" alt="icon">What Can Recruiters AI Do For You?</div>
+      
+    
 
-                <div class="options anim-item anim-no anim-item_active ">
-                    
-                    <!-- <a class="option" href="./info.html">Free Resources</a>
-                    <a class="option" href="./info.html">Services </a> -->
-  
+                <a class="btn btn-call-to-action content-container" href="https://calendly.com/gilleswilly11/s">Just Get Me A Meeting</a>
+               <p class="content-container">
+    Not ready to get started yet? <span class="pointer content-container"id="learn-more">LEARN MORE</span>
+</p>
 
-                </div>
 
-                <a class="btn btn-call-to-action " href="https://calendly.com/gilleswilly11/s">Just Get Me A Meeting</a>
+
 <div class="input-container">
   <!-- <input type="text" id="website-url" placeholder="Enter Website URL" />
   <button id="analyze-btn">Analyze Website</button> -->
@@ -88,16 +81,87 @@
 
 
     </header>
-    
+    <div id="hidden-content">
+
+ 
+        <section>
+
+            <div class="container">
+                <h2 class="h1 center">Are You Using LinkedIn Connections? Try Our 
+
+                    <span>
+FREE Custom Connection Sender!
+                    </span>
+                </h2>
+                <h2 class="center">Stop wasting time and unlock the hidden potential of the linkedin network.</p>
+ <div class="image-container">
+  <img src="./img/linkedin-connection.jpg" alt="LinkedIn Connection"/>
+  <p class="center">Our Linkedin Connection Sender automates networking for your account, providing you with new connections for optimizing your strategy and maximizing time efficiency.</p>
+
+                <a class="btn btn-call-to-action " href="https://calendly.com/gilleswilly11/s">Request Custom Chrome Extension</a>
+            
+</div>
+
+
+               
+            </div>
+
+        </section>
+
+          <section>
+            <!-- <div class="video">
+                <video muted="muted" playsinline="" autoplay="autoplay" loop="loop">
+                    <source src="./video/raven.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+                </video>
+
+            </div> -->
+            
+
+            <!-- <div class="container">
+                <h2 class="h1">
+                   Automate Hiring
+                    <span>
+                         Feed AI.
+                    </span>
+                </h2>
+
+                <p >
+                    Recruiters AI Is Proven To Improve Client Satisfaction, Fuels Your Hiring Process with Custom AI-Driven Solutions.
+                </p>
+                <div class="pre-option "><img src="./img/c.png" alt="icon">What Can Recruiters AI Do For You?</div>
+
+                <div class="options anim-item anim-no anim-item_active ">
+                    
+                    <a class="option" href="./info.html">Free Resources</a>
+                    <a class="option" href="./info.html">Services </a>
+  
+
+                </div>
+
+                <a class="btn btn-call-to-action " href="https://calendly.com/gilleswilly11/s">Just Get Me A Meeting</a>
+ -->
+
+            </div>
+
+            </div>
+
+        </section>
+        </div>
+
+
+
     <main>
 
     </main>
-    <footer id="footer">
+    <footer class="content-container" id="footer">
        
 
     </footer>
+   
     <script src="./js/events.js"></script>
     <script src="./js/logic.js"></script>
+    <script src="./js/transition-index.js"></script>
+
     
   
 </body>

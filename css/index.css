@@ -93,8 +93,35 @@ h1 span {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+p span {
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.h1 {
+  font-size: 3.5rem;
+}
 h2 {
   margin-top: 0.2em;
+}
+.center {
+  text-align: center;
 }
 h2 span {
   margin-top: 0.2em;
@@ -165,7 +192,7 @@ p {
 
   background-color: #ff5500;
   margin-top: 1em;
-  margin-bottom: 5em;
+
   text-align: center;
   color: #ffffff;
   font-size: 18px;
@@ -189,7 +216,42 @@ p {
   margin-right: 1em; /* Adjust the spacing between the image and text */
 }
 
+.image-container {
+  margin-right: 8em;
+  margin-left: 8em;
+  /* Make the container take the full width of its parent */
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Image styles */
+.image-container img {
+  max-width: 100%; /* Make the image take the full width of the container */
+  height: auto; /* Automatically adjust the image height to maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners for the image */
+  display: block; /* Remove any default inline spacing for the image */
+}
+
+section {
+  margin-bottom: 5em;
+}
+
+#hidden-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+
 @media (max-width: 1100px) {
+  section {
+    margin-bottom: 1em;
+  }
+  .image-container {
+    margin-right: 0;
+    margin-left: 0;
+    /* Make the container take the full width of its parent */
+    text-align: center; /* Center the image horizontally */
+  }
   .container {
     margin: 0 auto;
     padding: 0 1em;
@@ -265,4 +327,10 @@ p {
 
 #analyze-btn:hover {
   background-color: #0056b3;
+}
+/* Base styles for the image container */
+
+/* Add the hidden class to elements you want to hide initially */
+.hidden {
+  display: none;
 }
