@@ -256,6 +256,33 @@ iframe {
   border: none;
 }
 
+a {
+  color: #c9c9dc;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.highest-level .menu-item .menu-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url(../img/b37e3e033ec5ea8660be.png) no-repeat center center,
+    linear-gradient(180deg, #2a2934 0%, #262430 100%);
+  background-image: url(../img/b37e3e033ec5ea8660be.png),
+    linear-gradient(rgb(42, 41, 52) 0%, rgb(38, 36, 48) 100%);
+  background-position-x: center, initial;
+  background-position-y: center, initial;
+  background-size: initial, initial;
+
+  background-attachment: initial, initial;
+  background-origin: initial, initial;
+  background-clip: initial, initial;
+  background-color: initial;
+  transition: all 0.3s linear;
+}
+
 .chatbot {
   margin-bottom: 20px; /* Add margin at the bottom for spacing */
 }
@@ -322,6 +349,52 @@ iframe {
   font-weight: 600;
   color: #edeff8;
   text-align: center;
+}
+
+.highest-level {
+  padding: 50px 0 50px;
+  position: relative;
+}
+
+.highest-level .menu-block {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto new rows */
+  justify-content: center; /* Center items horizontally */
+}
+
+.highest-level .menu-item {
+  max-width: 255px;
+  width: 100%;
+  background: linear-gradient(261.71deg, #3a3845 13.92%, #2c2a36 84.19%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 0 15px 30px; /* Add horizontal margin for spacing */
+  position: relative;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.highest-level .menu-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 1;
+  transition: width 0.3s linear;
+}
+
+.highest-level .menu-item:nth-of-type(1)::before {
+  background: linear-gradient(180deg, #ff7365 0%, #fa4b39 100%);
+}
+
+.centered-img {
+  display: block; /* Ensure the image behaves as a block-level element */
+  margin: 0 auto; /* Set horizontal margin to auto, vertical margin to 0 */
 }
 
 @media (max-width: 1100px) {
