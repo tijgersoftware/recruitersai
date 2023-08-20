@@ -25,9 +25,10 @@ body {
 
   color: var(--clr-neutral);
 }
-
+/* 
 table {
   width: 100%;
+  overflow-x: auto;
   border-collapse: collapse;
 }
 th,
@@ -36,8 +37,25 @@ td {
   padding: 8px;
   text-align: center;
 }
+ */
+
+.table-container {
+  overflow-x: scroll;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 th {
   background-color: var(--clr-neutral-transparant);
+}
+th,
+td {
+  border: 1px solid var(--clr-neutral-transparant);
+  padding: 8px;
+  text-align: left;
 }
 
 h1 {
@@ -426,9 +444,42 @@ iframe {
 }
 
 @media (max-width: 1100px) {
+  .chatbot-container {
+    text-align: center; /* Center the iframe horizontally */
+    padding: 0;
+  }
+  blockquote h2,
+  blockquote p {
+    color: white;
+    font-size: 0.8rem;
+    text-align: left; /* Adjust text alignment as needed */
+  }
+
+  blockquote ul li {
+    margin: 5px 0;
+    font-size: 0.8rem;
+    text-align: left; /* Adjust text alignment as needed */
+    line-height: 1.4; /* Add line height for better readability */
+  }
+
+  .section-head p {
+    color: var(--clr-neutral);
+    font-size: 1rem;
+  }
   .container {
     margin: 0 auto;
     padding: 0 1em;
+  }
+
+  .section-head h2 {
+    color: var(--clr-accent);
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
   }
 
   .info-step-blocks {
@@ -456,5 +507,14 @@ iframe {
   .container--narrow {
     margin: 0 auto;
     padding: 0 3em;
+  }
+
+  .info-step-box {
+    background-color: var(--clr-neutral-transparant);
+    padding: 2em 0.6em;
+    border-radius: 10px;
+    margin-bottom: 5em;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
