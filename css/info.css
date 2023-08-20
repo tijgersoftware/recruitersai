@@ -26,6 +26,20 @@ body {
   color: var(--clr-neutral);
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid var(--clr-neutral-transparant);
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: var(--clr-neutral-transparant);
+}
+
 h1 {
   font-size: 3.5rem;
   margin-top: 0.2em;
@@ -178,6 +192,7 @@ h2 span {
 
 h2 {
   font-size: 3rem;
+  text-align: center;
 }
 
 .slider-value {
@@ -335,6 +350,74 @@ h2 {
 .container--narrow {
   margin: 0 auto;
   padding: 0 15em;
+}
+
+blockquote ul {
+  list-style-position: inside; /* Place bullet points inside the list items */
+  padding-left: 0; /* Remove default left padding of list */
+  margin-left: 0; /* Remove default left margin of list */
+}
+
+blockquote ul li {
+  margin: 5px 0;
+  font-size: 20px;
+  text-align: left; /* Adjust text alignment as needed */
+  line-height: 1.4; /* Add line height for better readability */
+}
+
+/* Rest of your existing CSS */
+
+blockquote {
+  background-color: (var(--clr-neutral-transparant));
+  border-left: 4px solid #ff5500;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 14px;
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+/* Headings within the prompt */
+blockquote h2,
+blockquote p {
+  color: white;
+  font-size: 14px;
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+/* List items within the prompt */
+blockquote ul {
+  list-style-position: inside; /* Place bullet points inside the list items */
+  padding-left: 0; /* Remove default left padding of list */
+  margin-left: 0; /* Remove default left margin of list */
+}
+
+blockquote ul li {
+  margin: 5px 0;
+  font-size: 20px;
+  text-align: left; /* Adjust text alignment as needed */
+  line-height: 1.4; /* Add line height for better readability */
+}
+
+/* Rest of your existing CSS */
+
+.chatbot-container {
+  text-align: center; /* Center the iframe horizontally */
+  padding-left: 6em;
+  padding-right: 6em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+iframe {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 100%; /* Ensure responsiveness */
+  height: 600px; /* Set a fixed height or adjust as needed */
+  border: none;
+}
+
+.chatbot {
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
 }
 
 @media (max-width: 1100px) {

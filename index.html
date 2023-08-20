@@ -1,169 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
-    <link rel="stylesheet" type="text/css" href="css/transition.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="css/transition.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
 
     <title>Recruiters AI</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <section class="banner-video">
-            <div class="video">
-                <video muted="muted" playsinline="" autoplay="autoplay" loop="loop">
-                    <source src="./video/raven.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-                </video>
+      <section class="banner-video">
+        <div class="video">
+          <video muted="muted" playsinline="" autoplay="autoplay" loop="loop">
+            <source
+              src="./video/raven.mp4"
+              type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+            />
+          </video>
+        </div>
+        <div class="content-container" id="topNavContainer"></div>
 
-            </div>
-            <div  class="content-container" id="topNavContainer"></div>
+        <div class="container">
+          <h1 class="content-container">
+            Do You Want More
+            <span class="content-container"> Successful Placements? </span>
+          </h1>
+          <h2 class="content-container" id="locationContainer">
+            <script>
+              // Function to display the user's estimated location in the container
+              function displayLocation(data) {
+                const location = data.city;
 
-            <div class="container">
-   
+                document.getElementById(
+                  "locationContainer"
+                ).innerHTML = `<div class="name-intro"><strong>Hey, I'm Gilles.<strong/></div>I'm determined to make recruitment in ${location} automated with AI.<br/>Congrats your area is available.<br/>Only 1 client per area, ensuring you stand out.<br/>My only question is, <span>will it be yours?<span/>`;
+              }
 
-                                <h1 class="content-container">
-                   Do You Want More <br/>
-                    <span class="content-container">
-                         Successful Placements?
-                    </span>
-                </h1>
-                <h2 class="content-container"id="locationContainer">
-          
+              // Fetch user's estimated location based on IP address using the ip-api.com API
+              const apiUrl = "https://ipapi.co/json/";
 
-    <script>
-      // Function to display the user's estimated location in the container
-      function displayLocation(data) {
-        const location = data.city;
-     
-            document.getElementById('locationContainer').innerHTML  = `<div class="name-intro"><strong>Hey, I'm Gilles.<strong/></div>I'm determined to make recruitment in ${location} automated with AI.<br/>Congrats your area is available.<br/>Only 1 client per area, ensuring you stand out.<br/>My only question is, <span>will it be yours?<span/>`;
-        
-      }
+              fetch(apiUrl)
+                .then((response) => response.json())
+                .then((data) => displayLocation(data))
+                .catch((error) => {
+                  console.error("test was an error fetching it:", error);
+                });
+            </script>
+          </h2>
 
-      // Fetch user's estimated location based on IP address using the ip-api.com API
-      const apiUrl = "https://ipapi.co/json/";;
-
-      fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => displayLocation(data))
-        .catch((error) => {
-          console.error("test was an error fetching it:", error);
-        });
-    </script>
-                </h2>
-      
-    
-
-                <a class="btn btn-call-to-action content-container" href="./signup.html">FREE RESOURCE HUB</a>
-               <p class="content-container">
-    Not ready to get started yet? <span class="pointer content-container"id="learn-more">LEARN MORE</span>
-</p>
-
-
-
-<div class="input-container">
-  <!-- <input type="text" id="website-url" placeholder="Enter Website URL" />
-  <button id="analyze-btn">Analyze Website</button> -->
-</div>
-
-            </div>
-
-            </div>
-
-        </section>
-
-
+          <a
+            class="btn btn-call-to-action content-container"
+            href="./signup.html"
+            >FREE RESOURCE HUB</a
+          >
+          <p class="content-container">
+            Not ready to get started yet?
+            <span class="pointer content-container" id="learn-more"
+              >LEARN MORE</span
+            >
+          </p>
+        </div>
+      </section>
     </header>
     <div id="hidden-content">
-
- 
-        <section>
-
-            <div class="container">
-                <h2 class="h1 center">Are You Using LinkedIn Connections? Try Our 
-
-                    <span>
-FREE Custom Connection Sender!
-                    </span>
-                </h2>
-                <h2 class="center">Stop wasting time and unlock the hidden potential of the linkedin network.</p>
- <div class="image-container">
-  <img src="./img/linkedin-connection.jpg" alt="LinkedIn Connection"/>
-  <p class="center">Our Linkedin Connection Sender automates networking for your account, providing you with new connections for optimizing your strategy and maximizing time efficiency.</p>
-
-                <a class="btn btn-call-to-action content-container" href="./signup.html">Get Free Chrome Extension NOW!</a>
-            
-</div>
-
-
-               
+      <section class="section-money">
+        <div class="container">
+          <div class="section-header">
+            <h2>
+              100+ Recruiters Have Used Recruiters AI To Automate Candidate
+              Screening
+            </h2>
+          </div>
+          <div class="block-money">
+            <div class="change-block-money block-money1">
+              <img src="./img/green-polygon.png" alt="" />
+              <span id="block-money">36, 174</span>
             </div>
-
-        </section>
-
-          <section>
-            <!-- <div class="video">
-                <video muted="muted" playsinline="" autoplay="autoplay" loop="loop">
-                    <source src="./video/raven.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-                </video>
-
-            </div> -->
-            
-
-            <!-- <div class="container">
-                <h2 class="h1">
-                   Automate Hiring
-                    <span>
-                         Feed AI.
-                    </span>
-                </h2>
-
-                <p >
-                    Recruiters AI Is Proven To Improve Client Satisfaction, Fuels Your Hiring Process with Custom AI-Driven Solutions.
-                </p>
-                <div class="pre-option "><img src="./img/c.png" alt="icon">What Can Recruiters AI Do For You?</div>
-
-                <div class="options anim-item anim-no anim-item_active ">
-                    
-                    <a class="option" href="./info.html">Free Resources</a>
-                    <a class="option" href="./info.html">Services </a>
-  
-
-                </div>
-
-                <a class="btn btn-call-to-action " href="https://calendly.com/gilleswilly11/s">Just Get Me A Meeting</a>
- -->
-
-            </div>
-
-            </div>
-
-        </section>
+          </div>
+          <p class="block-money-subtitle">Automated Interviews</p>
         </div>
+      </section>
+      <section>
+        <div class="container">
+          <h2 class="h1 center">
+            Are You Using LinkedIn Connections? Try Our
 
+            <span> FREE Custom Connection Sender! </span>
+          </h2>
+          <h2 class="center">
+            Stop wasting time and unlock the hidden potential of the linkedin
+            network.
+          </h2>
+          <div class="image-container">
+            <img
+              src="./img/linkedin-connection.jpg"
+              alt="LinkedIn Connection"
+            />
+            <p class="center">
+              Our Linkedin Connection Sender automates networking for your
+              account, providing you with new connections for optimizing your
+              strategy and maximizing time efficiency.
+            </p>
 
+            <a
+              class="btn btn-call-to-action content-container"
+              href="./signup.html"
+              >Get Free Chrome Extension NOW!</a
+            >
+          </div>
+        </div>
+      </section>
 
-    <main>
+      <section>
+        <div class="container">
+          <h2 class="h1 center">
+            Are You Meeting A Lot Of Unqualified Candidates? Try Our
 
-    </main>
-    <footer class="content-container" id="footer">
-       
+            <span> AI Recruiter Chatbot </span>
+          </h2>
+          <h2 class="center">
+            Stop wasting time and Only Meet With Qualified Candidates Worth Your
+            Time
+          </h2>
+          <div class="chatbot-container">
+            <div class="chatbot">
+              <iframe
+                class="content-container"
+                src="./demo.html"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <p class="center">
+              Our AI Recruiter Chatbot automates initial screening by asking
+              questions and follow up questions. At The end the AI will give the
+              candidate as score on 10 following the STAR technique. Only Meet
+              those with a high score. Keep In mind that the chatbot is under
+              active development and resume parsing will be available soon.
+            </p>
 
-    </footer>
-   
+            <a
+              class="btn btn-call-to-action content-container"
+              href="./signup.html"
+              >Get Automated!</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <main></main>
+    <footer class="content-container" id="footer"></footer>
+
     <script src="./js/events.js"></script>
     <script src="./js/logic.js"></script>
     <script src="./js/transition-index.js"></script>
-
-    
-  
-</body>
-
+  </body>
 </html>
