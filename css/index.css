@@ -268,18 +268,10 @@ a {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: url(../img/b37e3e033ec5ea8660be.png) no-repeat center center,
+  background: url(../img/b37e3e033ec5ea8660be.png) no-repeat center,
     linear-gradient(180deg, #2a2934 0%, #262430 100%);
   background-image: url(../img/b37e3e033ec5ea8660be.png),
     linear-gradient(rgb(42, 41, 52) 0%, rgb(38, 36, 48) 100%);
-  background-position-x: center, initial;
-  background-position-y: center, initial;
-  background-size: initial, initial;
-
-  background-attachment: initial, initial;
-  background-origin: initial, initial;
-  background-clip: initial, initial;
-  background-color: initial;
   transition: all 0.3s linear;
 }
 
@@ -291,6 +283,10 @@ a {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+.desktop-header {
+  height: 100vh;
 }
 
 .block-money {
@@ -398,6 +394,9 @@ a {
 }
 
 @media (max-width: 1100px) {
+  .desktop-header {
+    height: auto;
+  }
   .h1 {
     font-size: 2rem;
   }

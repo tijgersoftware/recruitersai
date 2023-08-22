@@ -53,7 +53,7 @@ th {
 }
 th,
 td {
-  border: 1px solid var(--clr-neutral-transparant);
+  border: 1px solid var(--clr-neutral);
   padding: 8px;
   text-align: left;
 }
@@ -386,7 +386,7 @@ blockquote ul li {
 /* Rest of your existing CSS */
 
 blockquote {
-  background-color: (var(--clr-neutral-transparant));
+  background-color: var(--clr-neutral-transparant);
   border-left: 4px solid #ff5500;
   padding: 10px 20px;
   margin: 20px 0;

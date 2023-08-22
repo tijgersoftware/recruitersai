@@ -1,3 +1,11 @@
+:root {
+  --clr-primary-200: #24222c;
+  --clr-neutral: #c9c9dc;
+  --clr-accent: #edeff8;
+  --clr-neutral-transparant: rgb(201, 201, 220, 0.1);
+  --clr-primary-400: #c9c9dc;
+  --clr-neutral-100: #fff;
+}
 header nav {
   padding: 1.8em 0;
   background-color: rgba(36, 34, 44, 0.95);
@@ -30,6 +38,7 @@ header nav {
   padding: 10px;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-right: 10px;
 }
 
 .navigation a:hover {
@@ -88,7 +97,6 @@ header nav {
     float: none;
     display: block;
     text-align: left;
-    background-color: var(--clr-neutral-900);
   }
 
   .topnav a:hover {

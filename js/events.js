@@ -28,16 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // Get the slider element
 var slider = document.querySelector(".slider");
 
-//   var menuId = toggle.getAttribute("data-target");
-//   var menu = document.getElementById(menuId);
-
-//   if (menu.style.display === "block") {
-//     menu.style.display = "none";
-//   } else {
-//     menu.style.display = "block";
-//   }
-// }
-
 // Get the value elements
 var value1 = document.getElementById("value1");
 var value2 = document.getElementById("value2");
@@ -45,7 +35,7 @@ var value2 = document.getElementById("value2");
 // Function to update the slider value
 function changeValue() {
   const sliderValue = slider.value;
-  console.log(sliderValue);
+
   if (sliderValue === "0") {
     value1.textContent = "Free Software";
     value2.textContent = "€" + 0;

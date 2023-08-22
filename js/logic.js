@@ -1,28 +1,31 @@
 function ResponsiveNavMenu() {
   var x = document.getElementById("topnav");
   if (x.className === "topnav") {
-    console.log("adding responsive");
     x.className += " responsive";
   } else {
-    console.log("adding topnac");
     x.className = "topnav";
   }
 }
 
 function toggleDropdownMenu(menuId) {
-  console.log("toggle drop down");
-  console.log(menuId);
-
   const menu = document.getElementById(menuId);
-  console.log(menu.className);
   if (menu.className === "menu" || menu.className === "menu visible") {
-    console.log("adding invisible");
     menu.className = "menu";
     menu.className += " invisible";
   } else {
-    console.log("adding visible");
     menu.className = "menu";
     menu.className += " visible";
+  }
+}
+
+function revealContent(hiddenContent) {
+  if (hiddenContent.style.height === "0px") {
+    // Show the hidden content with a smooth transition
+    hiddenContent.style.height = "auto";
+    hiddenContent.style.opacity = 1;
+
+    // Scroll to the hidden content
+    hiddenContent.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -41,4 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       hiddenContent.scrollIntoView({ behavior: "smooth" });
     }
   });
+
+  setTimeout(function () {
+    revealContent(hiddenContent); // Call the function after 8 seconds
+  }, 12000);
 });
