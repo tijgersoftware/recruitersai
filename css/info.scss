@@ -1,0 +1,522 @@
+@import "header";
+@import "footer";
+@import "transition";
+@import "outer-container";
+
+:root {
+  --clr-primary-200: #24222c;
+  --clr-neutral: #c9c9dc;
+  --clr-accent: #edeff8;
+  --clr-neutral-transparant: rgb(201, 201, 220, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Set background color and font styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--clr-primary-200);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #24222c 0%,
+    #121117 1%,
+    transparent 100%
+  );
+
+  color: var(--clr-neutral);
+}
+/* 
+table {
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid var(--clr-neutral-transparant);
+  padding: 8px;
+  text-align: center;
+}
+ */
+
+.table-container {
+  overflow-x: scroll;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--clr-neutral-transparant);
+}
+th,
+td {
+  border: 1px solid var(--clr-neutral);
+  padding: 8px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-top: 0.2em;
+  color: var(--clr-accent);
+  text-align: center;
+}
+
+h1 span {
+  font-size: 3.5rem;
+  margin-top: 0.2em;
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+.title {
+  margin-top: 3em;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+h2 span {
+  margin-top: 0.2em;
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.image-container {
+  /* Make the container take the full width of its parent */
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Image styles */
+.image-container img {
+  max-width: 100%; /* Make the image take the full width of the container */
+  height: auto; /* Automatically adjust the image height to maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners for the image */
+  display: block; /* Remove any default inline spacing for the image */
+}
+
+.btn.btn-call-to-action {
+  display: inline-block;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  background-color: #ff5500;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: var(--clr-accent);
+  font-size: 18px;
+
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+
+  text-decoration: none;
+}
+
+.btn.btn-call-to-action:hover {
+  background-color: #ff7700; /* Change background color on hover */
+}
+
+.info-step-blocks {
+  display: flex;
+  width: 100%;
+}
+.info-step-block {
+  flex: 1;
+  border-radius: 10px;
+  margin: 3em 0;
+  padding: 2em;
+  text-align: center;
+  background-color: var(--clr-neutral-transparant);
+}
+
+.info-step-block:first-child {
+  margin-right: 20px;
+}
+
+.block-subtitle {
+  position: relative;
+  padding: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: var(--clr-neutral-transparant);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.block-subtitle span {
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.block-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 20px solid transparent;
+  border-left: 20px solid #2d2b37;
+}
+
+.block-subtitle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 20px solid transparent;
+  border-right: 20px solid #2d2b37;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.slider-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-transparant);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.value {
+  text-align: left;
+}
+
+.p1-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--clr-neutral);
+}
+
+.p1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--clr-neutral);
+}
+
+.p2 {
+  font-size: 0.6rem;
+  margin: 0;
+  color: var(--clr-neutral);
+}
+
+.separator {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+
+  color: var(--clr-neutral);
+  margin: 0 3px;
+}
+
+.info-step-box {
+  background-color: var(--clr-neutral-transparant);
+  padding: 4em 2em;
+  border-radius: 10px;
+  margin-bottom: 5em;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-head {
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  color: var(--clr-accent);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.section-head p {
+  color: var(--clr-neutral);
+  font-size: 1.6rem;
+}
+
+.easy-step-container {
+  padding: 0 30em;
+  padding-bottom: 3em;
+}
+
+.inner-easy-step-container {
+  background-color: var(--clr-neutral-transparant);
+  padding: 1em 3em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.p-3-steps {
+  font-size: 7rem;
+}
+
+.video-container {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-box {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.video-box::-webkit-media-controls {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.video-box::-webkit-media-controls-panel {
+  flex-direction: row;
+}
+
+.triangle {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #ff5500;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.vertical-line {
+  position: absolute;
+  top: -100px; /* Adjust this value to control the vertical position of the line */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100px; /* Adjust this value to control the height of the line */
+  background-color: #ff5500;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+  text-decoration: none;
+}
+
+.step-container {
+  padding: 1.6em;
+  margin: 1em 30em;
+  margin-top: 10em;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+
+  background-color: #ff5500;
+  color: var(--clr-accent);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+  text-decoration: none;
+}
+
+.container--narrow {
+  margin: 0 auto;
+  padding: 0 15em;
+}
+
+blockquote ul {
+  list-style-position: inside; /* Place bullet points inside the list items */
+  padding-left: 0; /* Remove default left padding of list */
+  margin-left: 0; /* Remove default left margin of list */
+}
+
+blockquote ul li {
+  margin: 5px 0;
+  font-size: 20px;
+  text-align: left; /* Adjust text alignment as needed */
+  line-height: 1.4; /* Add line height for better readability */
+}
+
+/* Rest of your existing CSS */
+
+blockquote {
+  background-color: var(--clr-neutral-transparant);
+  border-left: 4px solid #ff5500;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 14px;
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+/* Headings within the prompt */
+blockquote h2,
+blockquote p {
+  color: white;
+  font-size: 14px;
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+/* List items within the prompt */
+blockquote ul {
+  list-style-position: inside; /* Place bullet points inside the list items */
+  padding-left: 0; /* Remove default left padding of list */
+  margin-left: 0; /* Remove default left margin of list */
+}
+
+blockquote ul li {
+  margin: 5px 0;
+  font-size: 20px;
+  text-align: left; /* Adjust text alignment as needed */
+  line-height: 1.4; /* Add line height for better readability */
+}
+
+/* Rest of your existing CSS */
+
+.chatbot-container {
+  text-align: center; /* Center the iframe horizontally */
+  padding-left: 6em;
+  padding-right: 6em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+iframe {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 100%; /* Ensure responsiveness */
+  height: 600px; /* Set a fixed height or adjust as needed */
+  border: none;
+}
+
+.chatbot {
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+
+.centered-img {
+  display: block; /* Ensure the image behaves as a block-level element */
+  margin: 0 auto; /* Set horizontal margin to auto, vertical margin to 0 */
+}
+
+@media (max-width: 1100px) {
+  .chatbot-container {
+    text-align: center; /* Center the iframe horizontally */
+    padding: 0;
+  }
+  blockquote h2,
+  blockquote p {
+    color: white;
+    font-size: 0.8rem;
+    text-align: left; /* Adjust text alignment as needed */
+  }
+
+  blockquote ul li {
+    margin: 5px 0;
+    font-size: 0.8rem;
+    text-align: left; /* Adjust text alignment as needed */
+    line-height: 1.4; /* Add line height for better readability */
+  }
+
+  .section-head p {
+    color: var(--clr-neutral);
+    font-size: 1rem;
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+
+  .section-head h2 {
+    color: var(--clr-accent);
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .info-step-blocks {
+    flex-direction: column;
+  }
+
+  .info-step-block:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .step-container {
+    padding: 1.6em;
+    margin: 1em 2em;
+    margin-top: 8em;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .easy-step-container {
+    padding: 0 3em;
+    padding-bottom: 3em;
+  }
+  .container--narrow {
+    margin: 0 auto;
+    padding: 0 3em;
+  }
+
+  .info-step-box {
+    background-color: var(--clr-neutral-transparant);
+    padding: 2em 0.6em;
+    border-radius: 10px;
+    margin-bottom: 5em;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,551 @@
+@import "header";
+@import "footer";
+@import "transition";
+@import "outer-container";
+:root {
+  --clr-primary-200: #24222c;
+  --clr-neutral: #c9c9dc;
+  --clr-accent: #edeff8;
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and font styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--clr-primary-200);
+  color: var(--clr-neutral);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 0;
+}
+
+.banner-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.video video {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+
+  text-align: left;
+}
+
+.container-header {
+  padding-top: 1.4em;
+  position: relative;
+  z-index: 1;
+
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0.2em;
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h1 span {
+  font-size: 3.5rem;
+  margin-top: 0.2em;
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+p span {
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  margin: 0 auto 36px;
+}
+.center {
+  text-align: center;
+}
+h2 span {
+  background-image: linear-gradient(
+    to right,
+    #ff5500,
+    #ff7700,
+    #ff9900,
+    #ffbb00,
+    #ffdd00,
+    #ffff00
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 2em;
+  margin-top: 1.2em;
+}
+.options {
+  margin-top: 30px;
+  display: grid; /* Use CSS grid for layout */
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  grid-gap: 10px; /* Add some spacing between columns and rows */
+  align-items: flex-start; /* Align the options to the left */
+  width: 40%;
+}
+
+.options .option::after {
+  content: "\2192"; /* Unicode character for right arrow */
+  display: inline-block;
+  margin-left: 5px; /* Add some spacing between the text and arrow */
+}
+
+.options .option {
+  position: relative; /* Add relative positioning to the option */
+  display: block;
+  padding: 0.8em;
+  color: var(--clr-neutral);
+  text-decoration: none;
+  background-color: var(--clr-primary-200); /* Add background color */
+  border-radius: 4px;
+  border: 1px solid var(--clr-neutral);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  grid-column: span 1; /* Each option occupies 1 column */
+}
+
+.options .option::after {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right position as needed */
+  transform: translateY(-50%);
+}
+
+.options .option:hover {
+  background-color: #ff7700; /* Change background color on hover */
+}
+
+.btn.btn-call-to-action {
+  display: inline-block;
+  width: 40%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  background-color: #ff5500;
+  margin-top: 1em;
+
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+}
+
+.btn.btn-call-to-action:hover {
+  background-color: #ff7700; /* Change background color on hover */
+}
+
+.pre-option {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+  padding-bottom: 1em;
+}
+
+.pre-option img {
+  margin-right: 1em; /* Adjust the spacing between the image and text */
+}
+
+.image-container {
+  padding-top: 1em;
+  margin-right: 8em;
+  margin-left: 8em;
+  /* Make the container take the full width of its parent */
+  text-align: center; /* Center the image horizontally */
+}
+
+/* Image styles */
+.image-container img {
+  max-width: 100%; /* Make the image take the full width of the container */
+  height: auto; /* Automatically adjust the image height to maintain aspect ratio */
+  border-radius: 15px; /* Rounded corners for the image */
+  display: block; /* Remove any default inline spacing for the image */
+}
+.learn-more {
+  color: #ff5500;
+  text-shadow: 0 0 5px rgba(255, 85, 0, 0.5); /* Adjust the alpha value */
+  animation: glowing 1.5s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 10px 10px rgba(255, 85, 0, 0.5);
+  }
+  50% {
+    text-shadow: 0 20px 20px rgba(255, 85, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 10px 10px rgba(255, 85, 0, 0.5);
+  }
+}
+
+section {
+  margin-bottom: 5em;
+}
+
+#hidden-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+.chatbot-container {
+  text-align: center; /* Center the iframe horizontally */
+  padding-left: 6em;
+  padding-right: 6em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+iframe {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 100%; /* Ensure responsiveness */
+  height: 600px; /* Set a fixed height or adjust as needed */
+  border: none;
+}
+
+a {
+  color: #c9c9dc;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+
+.highest-level .menu-item {
+  position: relative; /* Set the parent to a relative position */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+}
+
+.highest-level .menu-item .menu-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url(../img/b37e3e033ec5ea8660be.png) no-repeat center, #ff5500;
+
+  background-color: #ff5500;
+  transition: all 0.3s linear;
+  position: absolute;
+  bottom: 10px; /* Place the arrow at the bottom with a margin of 10px */
+}
+
+.menu-item-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.menu-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url(../img/b37e3e033ec5ea8660be.png) no-repeat center, #ff5500;
+  transition: all 0.3s linear;
+  background-color: #ff5500;
+  margin-left: 10px; /* Adjust as needed */
+  margin-bottom: 16px;
+
+  background-color: #ff5500;
+
+  text-decoration: none;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(255, 85, 0, 0.5); /* Add glow effect with box-shadow */
+}
+
+.chatbot {
+  margin-bottom: 20px; /* Add margin at the bottom for spacing */
+}
+.section-header {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.desktop-header {
+  height: 100vh;
+}
+
+.block-money {
+  max-width: 553px;
+  width: 100%;
+  height: 96px;
+  background: url(../img/5749dc3d955ea98c1e89.png) no-repeat center center;
+  background-size: contain;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-money span {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  margin-left: 6px;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.section-money .block-money-subtitle {
+  font-weight: 600;
+  color: #edeff8;
+  text-align: center;
+}
+
+.section-money {
+  padding: 2em 0 1em;
+  position: relative;
+}
+
+.section-money::before {
+  content: "";
+  position: absolute;
+  width: 2030px;
+  height: 800px;
+  right: -30%;
+  top: -270px;
+  background: url(7f1352d….svg) no-repeat bottom center;
+}
+.section-money::after {
+  content: "";
+  position: absolute;
+  width: 1660px;
+  height: 600px;
+  right: -20%;
+  top: -230px;
+  background: url(7f1352d….svg) no-repeat bottom center;
+}
+.section-money .block-money-subtitle {
+  font-weight: 600;
+  color: #edeff8;
+  text-align: center;
+}
+
+.highest-level {
+  padding: 50px 0 50px;
+  position: relative;
+}
+
+.highest-level .menu-block {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto new rows */
+  justify-content: center; /* Center items horizontally */
+}
+
+.highest-level .menu-item {
+  max-width: 255px;
+  width: 100%;
+  background: linear-gradient(261.71deg, #3a3845 13.92%, #2c2a36 84.19%);
+  border-radius: 12px;
+  padding: 16px 20px;
+  padding-bottom: 50px;
+  margin: 0 15px 30px; /* Add horizontal margin for spacing */
+  position: relative;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.highest-level .menu-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 1;
+  transition: width 0.3s linear;
+}
+
+.highest-level .menu-item:nth-of-type(1)::before {
+  background: linear-gradient(180deg, #ff7365 0%, #fa4b39 100%);
+}
+
+.centered-img {
+  display: block; /* Ensure the image behaves as a block-level element */
+  margin: 0 auto; /* Set horizontal margin to auto, vertical margin to 0 */
+}
+
+@media (max-width: 1100px) {
+  .desktop-header {
+    height: auto;
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .chatbot-container {
+    text-align: center; /* Center the iframe horizontally */
+    padding: 0px; /* Add padding for spacing */
+  }
+
+  section {
+    margin-bottom: 1em;
+  }
+  .image-container {
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 1em;
+    /* Make the container take the full width of its parent */
+    text-align: center; /* Center the image horizontally */
+  }
+  .container {
+    margin: 0 auto;
+    padding: 0 0em;
+  }
+
+  .container--narrow {
+    margin: 0 auto;
+    padding: 0 3em;
+  }
+
+  .options {
+    display: block; /* Change display to stack options vertically */
+    width: 100%; /* Take up full width */
+  }
+
+  .options .option {
+    margin-bottom: 10px; /* Add spacing between options */
+  }
+
+  .options .option::after {
+    display: none; /* Hide the arrow on mobile */
+  }
+  .btn.btn-call-to-action {
+    width: 100%;
+  }
+
+  .video video {
+    top: 0;
+    width: 100vw; /* Use 'vw' instead of 'vb' for width */
+    height: 100vh; /* Use 'vh' instead of 'vb' for height */
+    object-fit: cover;
+  }
+}
+
+.initial-hide {
+  display: none !important ;
+}
+
+.name-intro {
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+/* Basic styling for the input field and button */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#website-url {
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+#analyze-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#analyze-btn:hover {
+  background-color: #0056b3;
+}
+/* Base styles for the image container */
+
+/* Add the hidden class to elements you want to hide initially */
+.hidden {
+  display: none;
+}

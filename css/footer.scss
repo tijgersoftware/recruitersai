@@ -3,7 +3,6 @@
   --clr-neutral: #c9c9dc;
   --clr-accent: #edeff8;
 }
-
 /* Reset default margin and padding */
 * {
   margin: 0;
@@ -61,6 +60,7 @@ footer {
   text-decoration: none;
   color: var(--clr-neutral);
   font-size: 16px;
+
   padding: 10px 0;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -105,12 +105,14 @@ footer {
 
 @media (max-width: 768px) {
   /* Your existing CSS styles */
+
   .dropdown-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
   }
+
   .dropdown-toggle::after {
     content: "";
     display: inline-block;
@@ -120,27 +122,34 @@ footer {
     transform: rotate(45deg);
     transition: transform 0.3s ease-in-out;
   }
+
   .dropdown-toggle.open::after {
     transform: rotate(-45deg);
   }
+
   /* Your existing media query styles */
+
   footer {
     color: var(--clr-accent);
     padding: 0 0.6em;
     text-align: left;
     background-color: #24222c;
   }
+
   .footer-container {
     padding: 0;
   }
+
   .col {
     flex-basis: 100%;
     margin-bottom: 0.8em;
   }
+
   .dropdown-toggle::after {
     transform: rotate(-45deg);
   }
+
   .col-menu ul {
     margin-left: 1em;
   }
-}/*# sourceMappingURL=footer.css.map */
+}

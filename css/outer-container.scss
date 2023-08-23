@@ -1,0 +1,44 @@
+.body-wrapper {
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 1em; /* Apply default padding on the left and right */
+  transition: padding 1s ease; /* Add a transition for padding changes */
+}
+/* Apply styles when the viewport width is larger than 1350px */
+@media screen and (min-width: 1351px) {
+  .body-wrapper {
+    width: 1200px !important;
+    margin: 0 auto !important; /* Center the container horizontally */
+    padding: 0; /* Remove padding at this breakpoint */
+  }
+}
+
+/* Apply styles when the viewport width is less than or equal to 1350px */
+@media screen and (max-width: 1350px) {
+  .body-wrapper {
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 3em; /* Apply padding on the left and right */
+  }
+}
+/* Apply styles when the viewport width is between 1001px and 1350px */
+@media screen and (min-width: 1001px) and (max-width: 1350px) {
+  .body-wrapper {
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 2em; /* Apply padding on the left and right */
+  }
+}
+
+/* Apply styles when the viewport width is between 701px and 1000px */
+@media screen and (min-width: 701px) and (max-width: 1000px) {
+  .body-wrapper {
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 1.5em; /* Apply padding on the left and right */
+  }
+}
+
+/* Apply styles when the viewport width is up to 700px */
+@media screen and (max-width: 700px) {
+  .body-wrapper {
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 1em; /* Apply padding on the left and right */
+  }
+}
