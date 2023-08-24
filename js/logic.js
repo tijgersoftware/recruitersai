@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
       url.endsWith(".com")
     ) {
       setActiveTab("home-tab", tabs);
-    } else if (url.endsWith("features.html")) {
+    } else if (url.endsWith("features.html") || url.endsWith("features")) {
       setActiveTab("features-tab", tabs);
-    } else if (url.endsWith("pricing.html")) {
+    } else if (url.endsWith("pricing.html") || url.endsWith("pricing")) {
       setActiveTab("pricing-tab", tabs);
-    } else if (url.endsWith("company.html")) {
+    } else if (url.endsWith("company.html") || url.endsWith("company")) {
       setActiveTab("company-tab", tabs);
-    } else if (url.endsWith("info.html")) {
+    } else if (url.endsWith("info.html") || url.endsWith("info")) {
       setActiveTab("services-tab", tabs);
     }
   }, 300); // 5000 milliseconds = 5 seconds
